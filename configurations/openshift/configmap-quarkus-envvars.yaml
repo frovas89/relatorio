@@ -1,0 +1,16 @@
+apiVersion: v1
+data:  
+  TZ: 'America/Sao_Paulo'
+  AB_JOLOKIA_OFF: 'true'
+  JAVA_OPTIONS: '-Duser.timezone=America/Sao_Paulo -Djavax.net.ssl.trustStore=/deployments/classes/cacerts/cacerts -Djavax.net.ssl.trustStorePassword=changeit'
+  quarkus.datasource.jdbc.url: 'jdbc:postgresql://pghomolog11.celepar.parana/pr_escola_exemplo'
+  quarkus.datasource.username: 'sa_pr_escola_exemplo'
+  quarkus.http.cors.origins: 'http://localhost:8080,http://vue-exemplo-vue-exemplo-hml.paas.celepar.parana,https://vue-exemplo-vue-exemplo-hml.paas.celepar.parana,http://vue3-exemplo-vue3-exemplo-hml.paas.celepar.parana,https://vue3-exemplo-vue3-exemplo-hml.paas.celepar.parana,https://react-exemplo-react-exemplo-hml.paas.celepar.parana'
+  quarkus.oidc.public-key: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5u9jjGOy2PCZkBWD2Cp+0MCeK6kTG7eUKm3Q5jJofmR58CCHKJc6VT/7ep+Lj1Ki9fOvm7M1pdTnHEOSnFpp8LGYFfK3YE67fphnI7Gi0PHE22KuCoVHhYfMz+5QHEEYTwTv4yyeg7wsjpxYPl1yUSPeQahND55YBiNrg/JvYi0vCz6XCY5/p++vAV2oH9vnFE7gdaVjAMVv5sWkKZjLqTP7O82gJqRlMIK2ue0PSuKEyaFnXEUUAmInjTzrZSn8Roanqm6pmaeY5Rqh124LNQ2eQQULdQe4CG1PtVs3bk2LcLCIFtiLB6wwrYTLwoRT01Q9OEtaXiN2GfQEfJl35wIDAQAB'
+  quarkus.oidc-client.auth-cs.token-path: 'https://auth-cs-hml.identidadedigital.pr.gov.br/centralautenticacao/api/v1/token/jwt'
+  quarkus.oidc-client.auth-cs.client-id: '43cca4b3de2097b9558efefd0ecc3588'
+  quarkus.rest-client.auth-cs.url: 'https://auth-cs-hml.identidadedigital.pr.gov.br/centralautenticacao/api/v1/token/jwt'
+  quarkus.rest-client.central-cidadao.url: 'https://cidadao-cs-hml.identidadedigital.pr.gov.br/centralcidadao/api'
+kind: ConfigMap
+metadata:
+  name: quarkus-configmap-envvars
