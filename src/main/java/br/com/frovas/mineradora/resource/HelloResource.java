@@ -17,7 +17,7 @@ public class HelloResource {
 	public Response hello() {
 
 
-		return Response.ok().entity("Ae daleeee PROPOSTA!!").build();
+		return Response.ok().entity("Ae daleeee RELATORIO!!").build();
 	}
 
 }
